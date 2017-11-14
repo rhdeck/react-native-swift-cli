@@ -1,0 +1,24 @@
+{
+  "name": "react-native-swift-cli",
+  "version": "0.1.0",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.11.0",
+    "glob": "^7.1.2",
+    "xcode": "https://github.com/apache/cordova-node-xcode"
+  },
+  "author": {
+    "name": "Ray Deck",
+    "email": "ray@raydeck.com",
+    "url": "https://github.com/rhdeck"
+  },
+  "bin": {
+    "react-native-swift": "./bin/cli.js",
+    "rns": "./bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhdeck/react-native-swift-cli.git"
+  }
+}
