@@ -34,7 +34,7 @@ program
     }
     spawnSync("react-native", ["init", appname, appprojectpath], opts);
     chdir(appprojectpath); 
-    spawnSync("yarn", ["link", swiftpath], opts);
+    spawnSync("npm", ["install", swiftpath], opts);
     spawnSync("yarn", ["add", "react-native-swift"], opts);
     spawnSync("react-native", ["link"], opts); 
     const swiftjson = require(swiftpath + '/package.json'); 
