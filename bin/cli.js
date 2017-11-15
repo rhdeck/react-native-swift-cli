@@ -40,7 +40,7 @@ program
     chdir(appprojectpath); 
     spawnSync("yarn", ["add", "react-native-swift"], opts);
     spawnSync("yarn", ["link", swiftname], opts);
-    spawnSync("yarn", ["add", swiftname], opts);
+    spawnSync("yarn", ["add", swiftpath], opts);
     spawnSync("react-native", ["link"], opts); 
     const swiftjson = require(swiftpath + '/package.json'); 
     const swiftprojectname = swiftjson.name
