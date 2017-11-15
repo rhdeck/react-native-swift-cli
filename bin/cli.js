@@ -26,7 +26,7 @@ program
   .command("makeapp <appprojectname> <pathToSwiftProject> [appprojectpath]")
   .alias("m")
   .description("Create a blank app that adds a swift module to make development easier")
-  .action(function(appname, swiftname, appprojectpath) {
+  .action(function(appname, swiftpath, appprojectpath) {
     if(!appprojectpath) appprojectpath = "./" + appname
     if(["/", "."].indexOf(swiftpath.substring(0,1)) == -1) swiftpath = "./" + swiftpath; 
     if(swiftpath.substring(0,1) != "/") swiftpath = cwd() + "/" + swiftpath;
