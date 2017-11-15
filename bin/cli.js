@@ -6,6 +6,10 @@ const fs = require('fs');
 const spawnSync = require("child_process").spawnSync;
 const chdir = require('process').chdir;
 const cwd = require('process').cwd;
+const opts = {
+  'encoding': 'utf8', 
+  stdio: "inherit"
+}
 
 program
   .command("init <projectname> [projectpath]")
@@ -14,28 +18,28 @@ program
   .action(function(projectname, projectpath) {
      if(!projectpath) projectpath = "./" + projectname
      makeNewProject(projectname, projectpath); 
+     chdir(projectpath);
+     spawnSync("yarn", ["link"], opts);
    })
 
 program
-  .command("makeapp <appprojectname> <pathToSwiftProject> [appprojectpath]")
+  .command("makeapp <appprojectname> <nameOfSwiftProject> [appprojectpath]")
   .alias("m")
   .description("Create a blank app that adds a swift module to make development easier")
-  .action(function(appname, swiftpath, appprojectpath) {
+  .action(function(appname, swiftname, appprojectpath) {
     if(!appprojectpath) appprojectpath = "./" + appname
+    swiftname = swiftname.replace(/^\/|\/$/g, '');
+    var swiftpath = swiftname;
     if(["/", "."].indexOf(swiftpath.substring(0,1)) == -1) swiftpath = "./" + swiftpath; 
     if(swiftpath.substring(0,1) != "/") swiftpath = cwd() + "/" + swiftpath;
     if(!fs.existsSync(swiftpath + "/package.json")) {
       console.log("There is no valid project at the path: " + swiftpath + "\n"); 
       return; 
     }
-    let opts = {
-      'encoding': 'utf8', 
-      stdio: "inherit"
-    }
     spawnSync("react-native", ["init", appname, appprojectpath], opts);
     chdir(appprojectpath); 
     spawnSync("yarn", ["add", "react-native-swift"], opts);
-    spawnSync("npm", ["install", swiftpath], opts);
+    spawnSync("yarn", ["link", swiftname], opts);
     spawnSync("react-native", ["link"], opts); 
     const swiftjson = require(swiftpath + '/package.json'); 
     const swiftprojectname = swiftjson.name
