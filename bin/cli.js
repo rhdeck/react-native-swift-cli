@@ -23,27 +23,26 @@ program
    })
 
 program
-  .command("makeapp <appprojectname> <nameOfSwiftProject> [appprojectpath]")
+  .command("makeapp <appprojectname> <pathToSwiftProject> [appprojectpath]")
   .alias("m")
   .description("Create a blank app that adds a swift module to make development easier")
   .action(function(appname, swiftname, appprojectpath) {
     if(!appprojectpath) appprojectpath = "./" + appname
-    swiftname = swiftname.replace(/^\/|\/$/g, '');
-    var swiftpath = swiftname;
     if(["/", "."].indexOf(swiftpath.substring(0,1)) == -1) swiftpath = "./" + swiftpath; 
     if(swiftpath.substring(0,1) != "/") swiftpath = cwd() + "/" + swiftpath;
     if(!fs.existsSync(swiftpath + "/package.json")) {
       console.log("There is no valid project at the path: " + swiftpath + "\n"); 
       return; 
     }
+    const swiftjson = require(swiftpath + '/package.json'); 
+    const swiftprojectname = swiftjson.name
+    
     spawnSync("react-native", ["init", appname, appprojectpath], opts);
     chdir(appprojectpath); 
     spawnSync("yarn", ["add", "react-native-swift"], opts);
-    spawnSync("yarn", ["link", swiftname], opts);
+    spawnSync("yarn", ["link", swiftprojectname], opts);
     spawnSync("yarn", ["add", swiftpath], opts);
     spawnSync("react-native", ["link"], opts); 
-    const swiftjson = require(swiftpath + '/package.json'); 
-    const swiftprojectname = swiftjson.name
     copyAndReplace(__dirname + "/../templates/App.js", "./App.js", {
       "rnswifttemplate": swiftprojectname
     });
