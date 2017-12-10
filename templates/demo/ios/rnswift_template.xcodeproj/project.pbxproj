@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71D8F3811FB7A97B0000973C /* rnswifttemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D8F3801FB7A97B0000973C /* rnswifttemplate.m */; };
-		71D8F38A1FB7AA9D0000973C /* rnswifttemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D8F3891FB7AA9D0000973C /* rnswifttemplate.swift */; };
+		71D8F3811FB7A97B0000973C /* rnswift_template.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D8F3801FB7A97B0000973C /* rnswift_template.m */; };
+		71D8F38A1FB7AA9D0000973C /* rnswift_template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D8F3891FB7AA9D0000973C /* rnswift_template.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		71D8F37C1FB7A97B0000973C /* librnswifttemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = librnswifttemplate.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		71D8F3801FB7A97B0000973C /* rnswifttemplate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rnswifttemplate.m; sourceTree = "<group>"; };
-		71D8F3881FB7AA9D0000973C /* rnswifttemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rnswifttemplate-Bridging-Header.h"; sourceTree = "<group>"; };
-		71D8F3891FB7AA9D0000973C /* rnswifttemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rnswifttemplate.swift; sourceTree = "<group>"; };
+		71D8F37C1FB7A97B0000973C /* librnswift_template.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = librnswift_template.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D8F3801FB7A97B0000973C /* rnswift_template.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rnswift_template.m; sourceTree = "<group>"; };
+		71D8F3881FB7AA9D0000973C /* rnswift_template-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rnswift_template-Bridging-Header.h"; sourceTree = "<group>"; };
+		71D8F3891FB7AA9D0000973C /* rnswift_template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rnswift_template.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,35 +44,35 @@
 		71D8F3731FB7A97B0000973C = {
 			isa = PBXGroup;
 			children = (
-				71D8F37E1FB7A97B0000973C /* rnswifttemplate */,
+				71D8F37E1FB7A97B0000973C /* rnswift_template */,
 				71D8F37D1FB7A97B0000973C /* Products */,
-				71D8F3881FB7AA9D0000973C /* rnswifttemplate-Bridging-Header.h */,
+				71D8F3881FB7AA9D0000973C /* rnswift_template-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
 		71D8F37D1FB7A97B0000973C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71D8F37C1FB7A97B0000973C /* librnswifttemplate.a */,
+				71D8F37C1FB7A97B0000973C /* librnswift_template.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		71D8F37E1FB7A97B0000973C /* rnswifttemplate */ = {
+		71D8F37E1FB7A97B0000973C /* rnswift_template */ = {
 			isa = PBXGroup;
 			children = (
-				71D8F3891FB7AA9D0000973C /* rnswifttemplate.swift */,
-				71D8F3801FB7A97B0000973C /* rnswifttemplate.m */,
+				71D8F3891FB7AA9D0000973C /* rnswift_template.swift */,
+				71D8F3801FB7A97B0000973C /* rnswift_template.m */,
 			);
-			path = rnswifttemplate;
+			path = rnswift_template;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		71D8F37B1FB7A97B0000973C /* rnswifttemplate */ = {
+		71D8F37B1FB7A97B0000973C /* rnswift_template */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71D8F3851FB7A97B0000973C /* Build configuration list for PBXNativeTarget "rnswifttemplate" */;
+			buildConfigurationList = 71D8F3851FB7A97B0000973C /* Build configuration list for PBXNativeTarget "rnswift_template" */;
 			buildPhases = (
 				71D8F3781FB7A97B0000973C /* Sources */,
 				71D8F3791FB7A97B0000973C /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = rnswifttemplate;
-			productName = rnswifttemplate;
-			productReference = 71D8F37C1FB7A97B0000973C /* librnswifttemplate.a */;
+			name = rnswift_template;
+			productName = rnswift_template;
+			productReference = 71D8F37C1FB7A97B0000973C /* librnswift_template.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 71D8F3771FB7A97B0000973C /* Build configuration list for PBXProject "rnswifttemplate" */;
+			buildConfigurationList = 71D8F3771FB7A97B0000973C /* Build configuration list for PBXProject "rnswift_template" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				71D8F37B1FB7A97B0000973C /* rnswifttemplate */,
+				71D8F37B1FB7A97B0000973C /* rnswift_template */,
 			);
 		};
 /* End PBXProject section */
@@ -125,8 +125,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71D8F3811FB7A97B0000973C /* rnswifttemplate.m in Sources */,
-				71D8F38A1FB7AA9D0000973C /* rnswifttemplate.swift in Sources */,
+				71D8F3811FB7A97B0000973C /* rnswift_template.m in Sources */,
+				71D8F38A1FB7AA9D0000973C /* rnswift_template.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,11 +243,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UK2WGC8YX;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../../ios/Pods/**",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "rnswifttemplate-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "rnswift_template-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -260,11 +264,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UK2WGC8YX;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../../ios/Pods/**",
+				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "rnswifttemplate-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "rnswift_template-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -273,7 +281,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		71D8F3771FB7A97B0000973C /* Build configuration list for PBXProject "rnswifttemplate" */ = {
+		71D8F3771FB7A97B0000973C /* Build configuration list for PBXProject "rnswift_template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71D8F3831FB7A97B0000973C /* Debug */,
@@ -282,7 +290,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71D8F3851FB7A97B0000973C /* Build configuration list for PBXNativeTarget "rnswifttemplate" */ = {
+		71D8F3851FB7A97B0000973C /* Build configuration list for PBXNativeTarget "rnswift_template" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71D8F3861FB7A97B0000973C /* Debug */,

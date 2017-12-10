@@ -1,8 +1,8 @@
 import Foundation
 //Note that for objective-c (and therefore RN) to see the class you need to give the @objc hint
 //Also, any method exposed to objective-c runtime will also require the hint.
-@objc(rnswifttemplate)
-class rnswifttemplate: RCTEventEmitter {
+@objc(rnswift_template)
+class rnswift_template: RCTEventEmitter {
     @objc func voidDemo(_ dic:[String:Any]) -> Void {
         //Note that the client will never hear back from this function
         for thisKey:String in dic.keys {
@@ -24,12 +24,12 @@ class rnswifttemplate: RCTEventEmitter {
     @objc func delayedSend(_ message: String, ms:Int) -> Void {
         let body = ["message": message];
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(ms)) {
-            self.sendEvent(withName: "rnswifttemplate", body: body)
+            self.sendEvent(withName: "rnswift_template", body: body)
         }
     }
     //Note that any event name used in sendEvent above needs to be in this array.
     override func supportedEvents() -> [String]! {
-        return ["rnswifttemplate"]
+        return ["rnswift_template"]
     }
     //Demonstrate setting constants. Note that constants can be (almost) any type, but that this function is only evaluated once, at initialidation
     @objc override func constantsToExport() -> Dictionary<AnyHashable, Any> {

@@ -6,7 +6,7 @@
     "chalk": "^2.3.0",
     "commander": "^2.11.0",
     "glob": "^7.1.2",
-    "xcode": "https://github.com/apache/cordova-node-xcode"
+    "xcode": "apache/cordova-node-xcode"
   },
   "author": {
     "name": "Ray Deck",

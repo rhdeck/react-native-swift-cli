@@ -1,36 +1,33 @@
-import {
-  NativeModules,
-  NativeEventEmitter
-} from 'react-native';
-const rnswifttemplate_native = NativeModules.rnswifttemplate;
+import { NativeModules, NativeEventEmitter } from "react-native";
+const rnswift_template_native = NativeModules.rnswift_template;
 
-const rnswifttemplate = {
-  nativeObj: rnswifttemplate_native,
-  a: rnswifttemplate_native.a,
-  b: rnswifttemplate_native.b,
-  startTime: rnswifttemplate_native.startTime,
-  addListener: (cb) => {
-    const e = new NativeEventEmitter(rnswifttemplate_native); 
-    const s = e.addListener("rnswifttemplate", cb); 
+const rnswift_template = {
+  nativeObj: rnswift_template_native,
+  a: rnswift_template_native.a,
+  b: rnswift_template_native.b,
+  startTime: rnswift_template_native.startTime,
+  addListener: cb => {
+    const e = new NativeEventEmitter(rnswift_template_native);
+    const s = e.addListener("rnswift_template", cb);
     return s;
   },
   addListenerDemo: () => {
-    rnswifttemplate.addListener((arr)=> {
+    rnswift_template.addListener(arr => {
       console.log("Received a rnswifttemplate event", arr.message);
-    })
+    });
   },
   emitMessage: (message, delayms) => {
-    if(!delayms) delayms = 0;
-    return rnswifttemplate_native.delayedSend(message, delayms);
+    if (!delayms) delayms = 0;
+    return rnswift_template_native.delayedSend(message, delayms);
   },
-  demoWithVoid: (obj) => {
-    //Note no point in returning since it is a void function - no promise! 
-    rnswifttemplate_native.demoVoid(obj); 
+  demoWithVoid: obj => {
+    //Note no point in returning since it is a void function - no promise!
+    rnswift_template_native.demoVoid(obj);
   },
-  demoWithPromise: (message) => {
+  demoWithPromise: message => {
     //Returns a promise!
-    return rnswifttemplate_native.demo(message)
+    return rnswift_template_native.demo(message);
   }
-}
+};
 
-export default rnswifttemplate
+export default rnswift_template;
