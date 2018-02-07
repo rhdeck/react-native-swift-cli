@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 let program = require("commander");
+const yarnif = require("yarnif");
 const makeNewProject = require("../lib/makeNewProject");
 const copyAndReplace = require("../lib/copyAndReplace");
 const fs = require("fs");
@@ -39,6 +40,8 @@ program
     if (!projectpath) projectpath = "./" + projectname;
     makeNewProject(projectname, projectpath);
     chdir(projectpath);
+    yarnif.addDevDependency("rhdeck/react-native-swift-bridge");
+    spawnSync("yarn", ["run", "react-native-swift-bridge"], opts);
     spawnSync("yarn", ["link"], opts);
   });
 

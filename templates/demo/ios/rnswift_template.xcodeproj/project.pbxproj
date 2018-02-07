@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71D8F3811FB7A97B0000973C /* rnswift_template.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D8F3801FB7A97B0000973C /* rnswift_template.m */; };
 		71D8F38A1FB7AA9D0000973C /* rnswift_template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D8F3891FB7AA9D0000973C /* rnswift_template.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +24,7 @@
 
 /* Begin PBXFileReference section */
 		71D8F37C1FB7A97B0000973C /* librnswift_template.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = librnswift_template.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		71D8F3801FB7A97B0000973C /* rnswift_template.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rnswift_template.m; sourceTree = "<group>"; };
-		71D8F3881FB7AA9D0000973C /* rnswift_template-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rnswift_template-Bridging-Header.h"; sourceTree = "<group>"; };
+		71D8F3881FB7AA9D0000973C /* rn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rn-Bridging-Header.h"; sourceTree = "<group>"; };
 		71D8F3891FB7AA9D0000973C /* rnswift_template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rnswift_template.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				71D8F3891FB7AA9D0000973C /* rnswift_template.swift */,
-				71D8F3801FB7A97B0000973C /* rnswift_template.m */,
 			);
 			path = rnswift_template;
 			sourceTree = "<group>";
@@ -125,7 +122,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71D8F3811FB7A97B0000973C /* rnswift_template.m in Sources */,
 				71D8F38A1FB7AA9D0000973C /* rnswift_template.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,9 +247,9 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "rnswift_template-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "rn-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -272,8 +268,8 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "rnswift_template-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "rn-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
