@@ -69,6 +69,7 @@ program
     spawnSync("yarn", ["add", "react-native-swift"], opts);
     spawnSync("yarn", ["link", swiftprojectname], opts);
     spawnSync("yarn", ["add", swiftpath], opts);
+    spawnSync("yarn", ["add", "react-native-fix-pod-links"], opts);
     spawnSync("react-native", ["link"], opts);
     copyAndReplace(__dirname + "/../templates/App.js", "./App.js", {
       rnswifttemplate: swiftprojectname
