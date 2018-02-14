@@ -7,6 +7,6 @@
     "scripts": {
       "bridge": "react-native-swift-bridge",
       "watch": "react-native-swift-bridge --watch"
-    }
+    },
     "main": "index.js"
 }
