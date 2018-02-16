@@ -6,6 +6,7 @@
     "chalk": "^2.3.0",
     "commander": "^2.11.0",
     "glob": "^7.1.2",
+    "react-native-swift": "^1.0.0",
     "react-native-swift-bridge": "rhdeck/react-native-swift-bridge",
     "xcode": "rhdeck/cordova-node-xcode",
     "yarnif": "^1.4.0"
