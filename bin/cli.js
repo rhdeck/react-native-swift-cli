@@ -69,13 +69,14 @@ program
     spawnSync("yarn", ["add", "react-native-swift"], opts);
     spawnSync("yarn", ["link", swiftprojectname], opts);
     spawnSync("yarn", ["add", swiftpath], opts);
-    spawnSync("yarn", ["add", "react-native-fix-pod-links"], opts);
+    spawnSync("yarn", ["add", "react-native-fix-pod-links", "react-native-xcode"], opts);
+    spawnSync("react-native", ["addpodlinks"], opts)
     spawnSync("react-native", ["link"], opts);
     copyAndReplace(__dirname + "/../templates/App.js", "./App.js", {
       rnswifttemplate: swiftprojectname
     });
     console.log(
-      'Done. To edit your project in xcode, type "open ios/*xcode*"\n'
+      'Done. To edit your project in xcode, type "react-native xcode"\n'
     );
   });
 program
