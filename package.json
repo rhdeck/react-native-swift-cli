@@ -1,6 +1,6 @@
 {
   "name": "react-native-swift-cli",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.3.0",
