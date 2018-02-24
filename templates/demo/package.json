@@ -1,12 +1,13 @@
 {
-    "name": "rnswifttemplate",
-    "version": "0.0.1",
-    "peerDependencies": {
-      "react-native-swift":"^0.10.0"
-    },
-    "scripts": {
-      "bridge": "react-native-swift-bridge",
-      "watch": "react-native-swift-bridge --watch"
-    },
-    "main": "index.js"
+  "name": "rnswifttemplate",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "react-native-swift": "^1.0.0"
+  },
+  "scripts": {
+    "bridge": "react-native-swift-bridge",
+    "watch": "react-native-swift-bridge --watch"
+  },
+  "main": "index.js",
+  "isSwift": true
 }
