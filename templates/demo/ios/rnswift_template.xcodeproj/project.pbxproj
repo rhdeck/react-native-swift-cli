@@ -44,7 +44,7 @@
 			children = (
 				71D8F37E1FB7A97B0000973C /* rnswift_template */,
 				71D8F37D1FB7A97B0000973C /* Products */,
-				71D8F3881FB7AA9D0000973C /* rnswift_template-Bridging-Header.h */,
+				71D8F3881FB7AA9D0000973C /* rn-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -239,6 +239,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UK2WGC8YX;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../ios/Pods/**";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../ios/Pods/**",
@@ -260,6 +261,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UK2WGC8YX;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../ios/Pods/**";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../ios/Pods/**",
