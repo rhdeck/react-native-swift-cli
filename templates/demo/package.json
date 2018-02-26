@@ -6,7 +6,9 @@
   },
   "scripts": {
     "bridge": "react-native-swift-bridge",
-    "watch": "react-native-swift-bridge --watch"
+    "watch": "react-native-swift-bridge --watch",
+    "addpod": "react-native-pod addpod",
+    "removepod": "react-native-pod removepod"
   },
   "main": "index.js",
   "isSwift": true

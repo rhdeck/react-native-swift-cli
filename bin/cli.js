@@ -41,6 +41,7 @@ program
     makeNewProject(projectname, projectpath);
     chdir(projectpath);
     yarnif.addDevDependency("rhdeck/react-native-swift-bridge");
+    yarnif.addDevDependency("react-native-pod");
     spawnSync("yarn", ["run", "react-native-swift-bridge"], opts);
     spawnSync("yarn", ["link"], opts);
   });
@@ -69,8 +70,12 @@ program
     spawnSync("yarn", ["add", "react-native-swift"], opts);
     spawnSync("yarn", ["link", swiftprojectname], opts);
     spawnSync("yarn", ["add", swiftpath], opts);
-    spawnSync("yarn", ["add", "react-native-fix-pod-links", "react-native-xcode"], opts);
-    spawnSync("react-native", ["addpodlinks"], opts)
+    spawnSync(
+      "yarn",
+      ["add", "react-native-fix-pod-links", "react-native-xcode"],
+      opts
+    );
+    spawnSync("react-native", ["addpodlinks"], opts);
     spawnSync("react-native", ["link"], opts);
     copyAndReplace(__dirname + "/../templates/App.js", "./App.js", {
       rnswifttemplate: swiftprojectname
