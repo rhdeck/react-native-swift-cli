@@ -41,7 +41,7 @@ This comes with scripts now!
 
 ## yarn bridge
 
-Automatically build the bridge file from Swift to React-Native. No more objective-c coding! Uses [react-native-swift-bridge](https://npmjs.org/packages/react-native-swift-bridge) for the building work - check that out for idiosyncracies.
+Automatically build the bridge file from Swift to React-Native. No more objective-c coding! Uses [react-native-swift-bridge](https://npmjs.org/package/react-native-swift-bridge) for the building work - check that out for idiosyncracies.
 
 ## yarn watch
 
@@ -53,7 +53,7 @@ yarn watch &
 
 ## yarn addpod
 
-Utilizes the magic of [react-native-pod](https://npmjs.com/packages/react-native-pod) to add Cocoapod dependencies to your module. Here's how:
+Utilizes the magic of [react-native-pod](https://npmjs.com/package/react-native-pod) to add Cocoapod dependencies to your module. Here's how:
 
 ```bash
 yarn addpod TwilioVideo --podversion 2.0.0-beta1
