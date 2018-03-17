@@ -2,10 +2,10 @@ import Foundation
 import AVKit // This is for the camera questions asked in getCameraDirection
 @objc(rnswift_templateViewManager)
 class rnswift_templateViewManager: RCTViewManager, AVCapturePhotoCaptureDelegate {
-    var currentView:RNBostonView?
+    var currentView:rnswift_templateView?
     //MARK: RCTViewManager key methods
-    override func view() -> RNBostonView {
-        let newView = RNBostonView()
+    override func view() -> rnswift_templateView {
+        let newView = rnswift_templateView()
         currentView = newView
         return newView
     }
