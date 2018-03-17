@@ -40,7 +40,7 @@ program
     if (!projectpath) projectpath = "./" + projectname;
     makeNewProject(projectname, projectpath);
     chdir(projectpath);
-    yarnif.addDevDependency("rhdeck/react-native-swift-bridge");
+    yarnif.addDevDependency("react-native-swift-bridge");
     yarnif.addDevDependency("react-native-pod");
     spawnSync("yarn", ["run", "react-native-swift-bridge"], opts);
     spawnSync("yarn", ["link"], opts);
@@ -72,16 +72,25 @@ program
     spawnSync("yarn", ["add", swiftpath], opts);
     spawnSync(
       "yarn",
-      ["add", "react-native-fix-pod-links", "react-native-xcode"],
+      [
+        "add",
+        "react-native-fix-pod-links",
+        "react-native-xcode",
+        "react-native-setdevteam",
+        "react-native-bundlebase",
+        "react-native-fix-ios-version",
+        "react-native-camera-ios-enable"
+      ],
       opts
     );
     spawnSync("react-native", ["addpodlinks"], opts);
+    spawnSync("react-native", ["setdevteam"], opts);
     spawnSync("react-native", ["link"], opts);
     copyAndReplace(__dirname + "/../templates/App.js", "./App.js", {
       rnswifttemplate: swiftprojectname
     });
     console.log(
-      'Done. To edit your project in xcode, type "react-native xcode"\n'
+      'Done. To edit your project in xcode, type "react-native xcode"\nNote that if you want to deploy a cocoapod in this app (e.g. after running addpod on your module), you should "yarn add react-native-pod"'
     );
   });
 program

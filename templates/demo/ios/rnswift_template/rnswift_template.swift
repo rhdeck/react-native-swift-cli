@@ -3,13 +3,6 @@ import Foundation
 //Also, any method exposed to objective-c runtime will also require the hint.
 @objc(rnswift_template)
 class rnswift_template: RCTEventEmitter {
-    @objc func voidDemo(_ dic:[String:Any]) -> Void {
-        //Note that the client will never hear back from this function
-        for thisKey:String in dic.keys {
-            print("Key: " + thisKey);
-            print(dic[thisKey]);
-        }
-    }
     //Demonstrate a basic promise-based function in swift
     @objc func demo(_ message:String, success: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) -> Void {
         if(message.count == 0) {

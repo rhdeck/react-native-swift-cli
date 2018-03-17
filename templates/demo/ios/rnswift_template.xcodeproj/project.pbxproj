@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		716CFE8D205C40D500800D68 /* rnswift_templateViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716CFE8C205C40D500800D68 /* rnswift_templateViewManager.swift */; };
+		716CFE8F205C40EA00800D68 /* rnswift_templateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716CFE8E205C40EA00800D68 /* rnswift_templateView.swift */; };
+		716CFEA0205C74DD00800D68 /* rnswift_templateBasicViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716CFE9F205C74DD00800D68 /* rnswift_templateBasicViewManager.swift */; };
 		71D8F38A1FB7AA9D0000973C /* rnswift_template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D8F3891FB7AA9D0000973C /* rnswift_template.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		716CFE8C205C40D500800D68 /* rnswift_templateViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rnswift_templateViewManager.swift; sourceTree = "<group>"; };
+		716CFE8E205C40EA00800D68 /* rnswift_templateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rnswift_templateView.swift; sourceTree = "<group>"; };
+		716CFE9F205C74DD00800D68 /* rnswift_templateBasicViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rnswift_templateBasicViewManager.swift; sourceTree = "<group>"; };
 		71D8F37C1FB7A97B0000973C /* librnswift_template.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = librnswift_template.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D8F3881FB7AA9D0000973C /* rn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rn-Bridging-Header.h"; sourceTree = "<group>"; };
 		71D8F3891FB7AA9D0000973C /* rnswift_template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rnswift_template.swift; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 			isa = PBXGroup;
 			children = (
 				71D8F3891FB7AA9D0000973C /* rnswift_template.swift */,
+				716CFE8C205C40D500800D68 /* rnswift_templateViewManager.swift */,
+				716CFE8E205C40EA00800D68 /* rnswift_templateView.swift */,
+				716CFE9F205C74DD00800D68 /* rnswift_templateBasicViewManager.swift */,
 			);
 			path = rnswift_template;
 			sourceTree = "<group>";
@@ -122,6 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716CFE8F205C40EA00800D68 /* rnswift_templateView.swift in Sources */,
+				716CFEA0205C74DD00800D68 /* rnswift_templateBasicViewManager.swift in Sources */,
+				716CFE8D205C40D500800D68 /* rnswift_templateViewManager.swift in Sources */,
 				71D8F38A1FB7AA9D0000973C /* rnswift_template.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,10 +251,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UK2WGC8YX;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../ios/Pods/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../ios/Pods/**",
+					"$(SRCROOT)/../../../../ios/Pods",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../ios/Pods/**",
+					"$(SRCROOT)/../../../../ios/Pods",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
@@ -261,10 +277,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3UK2WGC8YX;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../../ios/Pods/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../ios/Pods/**",
+					"$(SRCROOT)/../../../../ios/Pods",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../ios/Pods/**",
+					"$(SRCROOT)/../../../../ios/Pods",
 				);
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";

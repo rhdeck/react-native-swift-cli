@@ -13,7 +13,7 @@ Helpers for initializing and getting started with making Swift-based native modu
 
 # Install globally for development
 
-_react-native-swift-cli_ is a helper utility for initializing new swift-based components.
+_react-native-swift-cli_ is a helper utility for initializing new swift-based native modules and UI components.
 
 ```bash
 yarn global add react-native-swift-cli
@@ -75,7 +75,9 @@ Don't develop native code from your static library. Never works well. Lots of XC
 react-native-swift makeapp myprojecttest myproject
 ```
 
-# Adding the module to an existing app
+**Important**: This installer uses [react-native-setdevteam](https://npmjs.com/package/react-native-setdevteam) and [react-native-bundlebase](https://npmjs.com/package/react-native-bundlebase) to set your development team and start of your bundle ID, respectively. This is going to be important for running the app on the device, which is necessary for demonstrating the demo camera UI component. The impact is that both of these are interactive the first time they run, so will ask you for the bundle base ID (e.g. com.mycompany or org.myname) you want to use, and the 10-digit development team ID to use. (It will search your ~/ directory to extract it from a project you already have if you don't know it off the top of your head)
+
+# Deployment: adding the module to an existing app
 
 You can add the Swift-based native module to you app relatively easily.
 
@@ -95,6 +97,7 @@ Well, almost. **If** you are using a CocoaPod, you will want to do the following
 
 ```
 yarn add react-native-pod react-native-fix-pod-links
+react-native addpodlinks
 react-native link
 ```
 
