@@ -15,7 +15,8 @@ CameraView.defaultProps = {
 };
 CameraView.takePicture = async () => {
   try {
-    return await NativeModules.rnswift_templateViewManager.takePicture();
+    const x = await NativeModules.rnswift_templateViewManager.takePicture();
+    return x;
   } catch (e) {
     console.log(e);
     return null;

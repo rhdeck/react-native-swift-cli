@@ -19,6 +19,10 @@ class rnswift_templateViewManager: RCTViewManager, AVCapturePhotoCaptureDelegate
     @objc func takePicture(_ resolve:@escaping RCTPromiseResolveBlock, reject:RCTPromiseRejectBlock) {
         guard let view = currentView else { reject("no_view", "No view loaded", nil); return }
         guard let session = view.thisSession else { reject("no_session", "No AV capture session running", nil); return }
+        if let p = self.photoOutput {
+            session.removeOutput(p)
+            self.photoOutput = nil
+        }
         let photoOutput = AVCapturePhotoOutput()
         session.addOutput(photoOutput)
         self.resolve = resolve

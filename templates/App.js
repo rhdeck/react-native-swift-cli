@@ -59,7 +59,7 @@ export default class App extends Component {
         </View>
         <View
           style={{
-            flex: 0.25,
+            height: 90,
             justifyContent: "center",
             alignItems: "center",
             borderTopWidth: 2,
@@ -84,7 +84,6 @@ export default class App extends Component {
           <Button
             title="Flip camera"
             onPress={() => {
-              console.log("Hi there setting");
               this.setState(({ cameraFront }) => {
                 return {
                   cameraFront: !cameraFront,
@@ -125,9 +124,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#F5FCFF"
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 15,
     textAlign: "center",
-    margin: 10
+    margin: 5
   },
   instructions: {
     textAlign: "center",
