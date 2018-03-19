@@ -12,8 +12,8 @@ const rnswift_template = {
     return s;
   },
   addListenerDemo: () => {
-    mod.addListener(arr => {
-      console.log("Received a mod event", arr.message);
+    rnswift_template.addListener(arr => {
+      console.log("Received a rnswift_template event", arr.message);
     });
   },
   emitMessage: async (message, delayms) => {
