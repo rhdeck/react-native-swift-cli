@@ -6,6 +6,7 @@ class rnswift_templateView: UIView {
     var thisSession: AVCaptureSession?
     var previewLayer: AVCaptureVideoPreviewLayer?
     var isFront:Bool = false
+    var photoOutput:AVCapturePhotoOutput?
     //MARK: React-native exposed props
     @objc var onStart:RCTBubblingEventBlock?
     @objc var cameraFront:Bool {
@@ -21,6 +22,8 @@ class rnswift_templateView: UIView {
                 let s = AVCaptureSession()
                 self.thisSession = s
                 s.addInput(input)
+                self.photoOutput = AVCapturePhotoOutput()
+                s.addOutput(self.photoOutput!)
                 s.startRunning()
                 let pl = AVCaptureVideoPreviewLayer(session: s)
                 DispatchQueue.main.async(){
